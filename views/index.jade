@@ -1,0 +1,59 @@
+extends layout
+
+block content
+
+	section
+		header.page-header
+			.container
+				h1 Printer
+				p Imprimez votre agenda personalisé.
+
+		.container
+
+			if ( errors )
+
+				each error, index in errors
+
+					.alert.alert-warning.alert-dismissible(role="alert")
+						button.close(type="button", data-dismiss="alert", aria-label="Close")
+							span(aria-hidden="true") &times;
+
+						p <strong>Attention !</strong> #{error}
+
+			.row
+				.col-md-6
+					form(method="POST", action="/login")
+						.form-group
+							label(for="conn_user") Nom d'utilisateur
+							input.form-control#conn_user(name="conn_user", autocomplete="false", type="text", placeholder="Roger44")
+						
+						.form-group
+							label(for="conn_pass") Mot de passe
+							input.form-control#conn_pass(name="conn_pass", autocomplete="false", type="password", placeholder="12345")
+						
+						button.btn.btn-primary(type="submit") Connexion
+
+				.col-md-6
+					form(method="POST", action="/signup")
+						.form-group
+							label(for="sign_user") Nom d'utilisateur
+							input.form-control#sign_user(name="sign_user", autocomplete="false", type="text", placeholder="Roger44")
+						
+						.form-group
+							label(for="conn_pass") Mot de passe
+							input.form-control#sign_pass(name="sign_pass", autocomplete="false", type="password", placeholder="12345")
+
+						.form-group
+							label(for="conn_pass") ID du Printer
+							input.form-control#sign_id(name="sign_id", autocomplete="false", type="text", placeholder="320030000d47343233323030")
+						
+						button.btn.btn-primary(type="submit") Inscription
+
+
+
+
+
+
+
+
+

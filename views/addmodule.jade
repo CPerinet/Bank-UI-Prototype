@@ -1,0 +1,34 @@
+extends layout
+	
+block content
+
+	include nav
+
+	section
+		header.page-header
+			.container
+				h1 Ajouter #{module.name}
+				p #{module.description}
+
+		if ( module.params )
+
+			.container
+				form(method="POST", action="/postaddmodule/#{module._id}")
+
+					each param, i in module.params
+						.form-group
+							label(for="param-#{i}") #{param.name}
+							
+							if ( param.type == "string" )
+
+								input.form-control(name="param-#{i}", id="param-#{i}", autocomplete="false", type="text")
+
+							if ( param.type == "choices" )
+
+								select.form-control(name="param-#{i}", id="param-#{i}")
+
+									each option, j in param.values
+
+										option #{ option }
+
+					button.submit.btn.btn-primary(type="submit") Ajouter !

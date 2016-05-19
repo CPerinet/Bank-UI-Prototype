@@ -1,0 +1,36 @@
+.modules {
+
+	&_list {
+		@extend .content;
+		padding: 0;
+		
+	}
+
+	.module {
+		display: flex;
+		margin: 10px 0;
+		height: 65px;
+
+		&_logo {
+			width: 65px;
+			height: 65px;
+
+			margin-right: 10px;
+		}
+
+		&_title {
+			line-height: 65px;
+			color: white;
+		}
+
+		&_main {
+			padding: 0 20px;
+
+			flex-grow: 1;
+
+			background-color: $medium_gray;
+			box-shadow: 1px 1px 1px rgba(black, 0.45);
+		}
+	}
+
+}

@@ -287,6 +287,30 @@ router.get('/dashboard', function(req, res, next) {
 
 /**
  *
+ * Modules
+ *
+ */
+
+ router.get('/modules', function(req, res, next) {
+
+ 	if ( !req.session.user ) {
+		req.session.errors = ["Vous devez être connecté pour accéder au dashboard."];
+	 	res.redirect('/');
+
+	 	return false;
+	}
+
+	res.render('modules');
+
+ });
+
+
+
+
+
+
+/**
+ *
  * Add Page
  *
  */

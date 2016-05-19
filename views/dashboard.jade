@@ -2,75 +2,77 @@ extends layout
 
 block content
 
-	include nav
+	h1 Raser
 
-	section
-		header.page-header
-			.container
-				h1 #{session.username}
-				p Printer ID :
-					strong  #{session.printer_id}
+	//- include nav
 
-		if ( umodules.length > 0 )
+	//- section
+	//- 	header.page-header
+	//- 		.container
+	//- 			h1 #{session.username}
+	//- 			p Printer ID :
+	//- 				strong  #{session.printer_id}
 
-			.container
-				.page-header.page-header-line
-					h3 Mes modules
+	//- 	if ( umodules.length > 0 )
 
-				each module, i in umodules
+	//- 		.container
+	//- 			.page-header.page-header-line
+	//- 				h3 Mes modules
 
-					.panel.panel-default
-						.panel-heading.clearfix
-							.pull-left
-								h4 #{module.name}
+	//- 			each module, i in umodules
 
-							.btn-group.pull-right(role="group" aria-label="...")
-								if ( module.state == 3 )
-									p.btn.btn-info ---
-								else
-									a.btn.btn-default(href="/state/#{module._id}/3") ---
+	//- 				.panel.panel-default
+	//- 					.panel-heading.clearfix
+	//- 						.pull-left
+	//- 							h4 #{module.name}
 
-								if ( module.state == 2 )
-									p.btn.btn-info --
-								else
-									a.btn.btn-default(href="/state/#{module._id}/2") --
+	//- 						.btn-group.pull-right(role="group" aria-label="...")
+	//- 							if ( module.state == 3 )
+	//- 								p.btn.btn-info ---
+	//- 							else
+	//- 								a.btn.btn-default(href="/state/#{module._id}/3") ---
 
-								if ( module.state == 1 )
-									p.btn.btn-info -
-								else
-									a.btn.btn-default(href="/state/#{module._id}/1") -
+	//- 							if ( module.state == 2 )
+	//- 								p.btn.btn-info --
+	//- 							else
+	//- 								a.btn.btn-default(href="/state/#{module._id}/2") --
 
-								if ( module.state == 0 )
-									p.btn.btn-info
-										span.glyphicon.glyphicon-ban-circle( aria-hidden="true" )
-								else
-									a.btn.btn-default(href="/state/#{module._id}/0")
-										span.glyphicon.glyphicon-ban-circle( aria-hidden="true" )
+	//- 							if ( module.state == 1 )
+	//- 								p.btn.btn-info -
+	//- 							else
+	//- 								a.btn.btn-default(href="/state/#{module._id}/1") -
 
-						.panel-body
+	//- 							if ( module.state == 0 )
+	//- 								p.btn.btn-info
+	//- 									span.glyphicon.glyphicon-ban-circle( aria-hidden="true" )
+	//- 							else
+	//- 								a.btn.btn-default(href="/state/#{module._id}/0")
+	//- 									span.glyphicon.glyphicon-ban-circle( aria-hidden="true" )
 
-						.panel-footer.clearfix
-							.pull-left
-								a.btn.btn-default(href="/api/#{module._id}")
-									span.glyphicon.glyphicon-console( aria-hidden="true" target="_blank")
-							.pull-right
-								a.btn.btn-danger(href="/remove/#{module._id}")
-									span.glyphicon.glyphicon-trash( aria-hidden="true" )
+	//- 					.panel-body
 
-		if ( modules.length > 0 )
+	//- 					.panel-footer.clearfix
+	//- 						.pull-left
+	//- 							a.btn.btn-default(href="/api/#{module._id}")
+	//- 								span.glyphicon.glyphicon-console( aria-hidden="true" target="_blank")
+	//- 						.pull-right
+	//- 							a.btn.btn-danger(href="/remove/#{module._id}")
+	//- 								span.glyphicon.glyphicon-trash( aria-hidden="true" )
 
-			.container
-				.page-header.page-header-line
-					h3 Ajouter un module
+	//- 	if ( modules.length > 0 )
 
-				.row
+	//- 		.container
+	//- 			.page-header.page-header-line
+	//- 				h3 Ajouter un module
 
-					each module, i in modules
+	//- 			.row
 
-						.col-sm-6.col-md-4
-							.thumbnail
-								.caption
-									h4 #{module.name}
-									p #{module.description}.
-									p
-										a.btn.btn-primary(href="/add/#{module._id}", role="button") Ajouter
+	//- 				each module, i in modules
+
+	//- 					.col-sm-6.col-md-4
+	//- 						.thumbnail
+	//- 							.caption
+	//- 								h4 #{module.name}
+	//- 								p #{module.description}.
+	//- 								p
+	//- 									a.btn.btn-primary(href="/add/#{module._id}", role="button") Ajouter

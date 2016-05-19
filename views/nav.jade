@@ -1,19 +1,55 @@
 block nav
 
-	nav.navbar.navbar-default.navbar-fixed-top
-		.container
-			ul.nav.navbar-nav.navbar-left
-				li
-					a(href="/dashboard") Accueil
-				
+	nav.nav
+		a.nav_logo(href="/dashboard")
+			img.nav_logo_img(src="/img/logo.svg")
 
-			ul.nav.navbar-nav.navbar-right
-				li
-					a(href="#")
-						span.glyphicon.glyphicon-print( aria-hidden="true" )
-				li
-					a(href="#")
-						span.glyphicon.glyphicon-cog( aria-hidden="true" )
-				li
-					a(href="/logout")
-						span.glyphicon.glyphicon-log-out( aria-hidden="true" )
+		.left
+
+			ul.nav_pages
+				li.nav_pages_item.current
+					a(href="#") Tableau de bord
+				li.nav_pages_item
+					a(href="#") Mes Services
+				li.nav_pages_item
+					a(href="#") Aide
+
+			.nav_notif(href="#" alt="notifications")
+				img.nav_notif_logo(src="/img/notif.svg")
+
+				p.nav_notif_new
+					span.nav_notif_number
+
+				ul.nav_notif_list
+					li.nav_notif_item
+						img.nav_notif_profil(src="/img/brands/xxxx.jpg")
+						p.nav_notif_desc
+							<strong>LECLERC: 46 PTS</strong> ajoutés carte utilisée le 28/04
+						.nav_notif_old
+						.nav_notif_new
+
+					li.nav_notif_item
+						img.nav_notif_profil(src="/img/brands/xxxx.jpg")
+						p.nav_notif_desc
+							<strong>LECLERC: 46 PTS</strong> ajoutés carte utilisée le 28/04
+						.nav_notif_old
+						.nav_notif_new
+
+					li.nav_notif_item
+						img.nav_notif_profil(src="/img/brands/xxxx.jpg")
+						p.nav_notif_desc
+							<strong>LECLERC: 46 PTS</strong> ajoutés carte utilisée le 28/04
+						.nav_notif_old
+						.nav_notif_new
+
+			.nav_profil
+				a.nav_profil_link(href="#" title="profil")
+					img.nav_profil_img
+					p.nav_profil_name
+						<span>Legrand</span> Juliette
+
+				ul.nav_profil_list
+					li.nav_profil_item
+						a(href="/profil") Profil
+						a(href="") Perte / Vol
+						a(href="/logout") Déconnexion

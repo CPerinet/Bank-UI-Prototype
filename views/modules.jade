@@ -1,0 +1,118 @@
+extends layout
+
+block content
+
+	include nav
+
+	main.modules
+
+		section.pannel
+			ul.pannel_list
+				li.pannel_list_item Type
+				li.pannel_list_item Engagement
+				li.pannel_list_item Paiment
+				li.pannel_list_item Etat
+
+		ul.modules_list
+			li.module
+				img.module_logo(src="img/lorem.png", alt="")
+				.module_main
+					h2.module_title Lorem ipsum dolor.
+					.module_more
+						img.module_infos
+						img.module_activate
+
+			li.module
+				img.module_logo(src="img/lorem.png", alt="")
+				.module_main
+					h2.module_title Lorem ipsum dolor.
+					.module_more
+						img.module_infos
+						img.module_activate
+
+			li.module
+				img.module_logo(src="img/lorem.png", alt="")
+				.module_main
+					h2.module_title Lorem ipsum dolor.
+					.module_more
+						img.module_infos
+						img.module_activate
+
+			li.module
+				img.module_logo(src="img/lorem.png", alt="")
+				.module_main
+					h2.module_title Lorem ipsum dolor.
+					.module_more
+						img.module_infos
+						img.module_activate
+
+	//- section
+	//- 	header.page-header
+	//- 		.container
+	//- 			h1 #{session.username}
+	//- 			p Printer ID :
+	//- 				strong  #{session.printer_id}
+
+	//- 	if ( umodules.length > 0 )
+
+	//- 		.container
+	//- 			.page-header.page-header-line
+	//- 				h3 Mes modules
+
+	//- 			each module, i in umodules
+
+	//- 				.panel.panel-default
+	//- 					.panel-heading.clearfix
+	//- 						.pull-left
+	//- 							h4 #{module.name}
+
+	//- 						.btn-group.pull-right(role="group" aria-label="...")
+	//- 							if ( module.state == 3 )
+	//- 								p.btn.btn-info ---
+	//- 							else
+	//- 								a.btn.btn-default(href="/state/#{module._id}/3") ---
+
+	//- 							if ( module.state == 2 )
+	//- 								p.btn.btn-info --
+	//- 							else
+	//- 								a.btn.btn-default(href="/state/#{module._id}/2") --
+
+	//- 							if ( module.state == 1 )
+	//- 								p.btn.btn-info -
+	//- 							else
+	//- 								a.btn.btn-default(href="/state/#{module._id}/1") -
+
+	//- 							if ( module.state == 0 )
+	//- 								p.btn.btn-info
+	//- 									span.glyphicon.glyphicon-ban-circle( aria-hidden="true" )
+	//- 							else
+	//- 								a.btn.btn-default(href="/state/#{module._id}/0")
+	//- 									span.glyphicon.glyphicon-ban-circle( aria-hidden="true" )
+
+	//- 					.panel-body
+
+	//- 					.panel-footer.clearfix
+	//- 						.pull-left
+	//- 							a.btn.btn-default(href="/api/#{module._id}")
+	//- 								span.glyphicon.glyphicon-console( aria-hidden="true" target="_blank")
+	//- 						.pull-right
+	//- 							a.btn.btn-danger(href="/remove/#{module._id}")
+	//- 								span.glyphicon.glyphicon-trash( aria-hidden="true" )
+
+	//- 	if ( modules.length > 0 )
+
+	//- 		.container
+	//- 			.page-header.page-header-line
+	//- 				h3 Ajouter un module
+
+	//- 			.row
+
+	//- 				each module, i in modules
+
+	//- 					.col-sm-6.col-md-4
+	//- 						.thumbnail
+	//- 							.caption
+	//- 								h4 #{module.name}
+	//- 								p #{module.description}.
+	//- 								p
+	//- 									a.btn.btn-primary(href="/add/#{module._id}", role="button") Ajouter
